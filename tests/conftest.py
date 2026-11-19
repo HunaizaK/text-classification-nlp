@@ -5,6 +5,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 import pytest
+import torch
 from transformers import DistilBertConfig, DistilBertForSequenceClassification, DistilBertTokenizerFast
 
 TOPIC_WORDS = [
@@ -35,5 +36,6 @@ def tiny_bert():
     vocab += [w for words in TOPIC_WORDS for w in words]
     tokenizer = DistilBertTokenizerFast(vocab={w: i for i, w in enumerate(vocab)})
     config = DistilBertConfig(vocab_size=len(vocab), dim=32, n_layers=1, n_heads=2, hidden_dim=64, max_position_embeddings=64, num_labels=4)
+    torch.manual_seed(0)  # deterministic init so the tiny-model tests behave the same on every OS
     model = DistilBertForSequenceClassification(config)
     return model, tokenizer
