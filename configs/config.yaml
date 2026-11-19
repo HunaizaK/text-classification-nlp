@@ -1,0 +1,34 @@
+seed: 42
+data:
+  raw_dir: data/raw
+  train_url: https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/train.csv
+  test_url: https://raw.githubusercontent.com/mhjabreel/CharCnn_Keras/master/data/ag_news_csv/test.csv
+  train_sha256: 76a0a2d2f92b286371fe4d4044640910a04a803fdd2538e0f3f29a5c6f6b672e
+  test_sha256: 521465c2428ed7f02f8d6db6ffdd4b5447c1c701962353eb2c40d548c3c85699
+  train_size: 4000      # stratified subset used by BOTH models (CPU budget)
+  val_size: 1000        # held out from the training CSV for model selection
+  test_size: 2000       # stratified subset of the official test split
+baseline:
+  c_grid: [0.03, 0.1, 0.3, 1.0]
+  learning_curve_sizes: [1000, 4000, 16000, 64000, 119000]
+transformer:
+  checkpoint: distilbert-base-uncased
+  max_length: 128
+  epochs: 2
+  batch_size: 32
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+distill:
+  unlabeled_size: 16000   # articles the teacher labels (labels ignored)
+  min_confidence: 0.9
+compress:
+  latency_samples: 200   # single-article requests timed per model
+artifacts_dir: artifacts
+reports_dir: reports
+
+full:
+  data: {train_size: 20000, val_size: 2000, test_size: 7600}
+  distill: {unlabeled_size: 60000}
+  artifacts_dir: artifacts_full
+  reports_dir: reports_full
