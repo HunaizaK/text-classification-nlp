@@ -1,0 +1,404 @@
+{
+  "baseline": {
+    "best_c": 1.0,
+    "val_macro_f1_by_c": {
+      "0.03": 0.8772089281593731,
+      "0.1": 0.8854804770622784,
+      "0.3": 0.8864467869947458,
+      "1.0": 0.8865027104211205
+    },
+    "train_seconds": 2.7,
+    "test": {
+      "accuracy": 0.88,
+      "macro_f1": 0.8796,
+      "per_class_f1": {
+        "World": 0.8831,
+        "Sports": 0.9478,
+        "Business": 0.8338,
+        "Sci/Tech": 0.8538
+      }
+    },
+    "top_features": {
+      "World": [
+        "afp",
+        "iraq",
+        "minister",
+        "canadian press",
+        "un",
+        "peace",
+        "afp afp",
+        "prime minister",
+        "president",
+        "nuclear",
+        "canadian",
+        "prime"
+      ],
+      "Sports": [
+        "his",
+        "team",
+        "coach",
+        "cup",
+        "he",
+        "sports",
+        "league",
+        "season",
+        "game",
+        "at",
+        "club",
+        "at the"
+      ],
+      "Business": [
+        "oil",
+        "us",
+        "dollar",
+        "corp",
+        "bank",
+        "fund",
+        "bid",
+        "sales",
+        "company",
+        "co",
+        "buy",
+        "tax"
+      ],
+      "Sci/Tech": [
+        "space",
+        "internet",
+        "nasa",
+        "online",
+        "scientists",
+        "web",
+        "ibm",
+        "intel",
+        "com",
+        "apple",
+        "video",
+        "pc"
+      ]
+    },
+    "learning_curve": [
+      {
+        "train_size": 1000,
+        "accuracy": 0.847,
+        "macro_f1": 0.846,
+        "fit_seconds": 1.2
+      },
+      {
+        "train_size": 4000,
+        "accuracy": 0.8835,
+        "macro_f1": 0.8832,
+        "fit_seconds": 3.5
+      },
+      {
+        "train_size": 16000,
+        "accuracy": 0.902,
+        "macro_f1": 0.9016,
+        "fit_seconds": 10.8
+      },
+      {
+        "train_size": 64000,
+        "accuracy": 0.912,
+        "macro_f1": 0.9118,
+        "fit_seconds": 43.0
+      },
+      {
+        "train_size": 118814,
+        "accuracy": 0.919,
+        "macro_f1": 0.9188,
+        "fit_seconds": 81.2
+      }
+    ]
+  },
+  "distilbert": {
+    "train_seconds": 1845.7,
+    "history": [
+      {
+        "loss": 1.2525991821289062,
+        "grad_norm": 2.866119384765625,
+        "learning_rate": 4.8e-05,
+        "epoch": 0.2,
+        "step": 25
+      },
+      {
+        "loss": 0.5463659286499023,
+        "grad_norm": 4.554338455200195,
+        "learning_rate": 4.466666666666667e-05,
+        "epoch": 0.4,
+        "step": 50
+      },
+      {
+        "loss": 0.36057823181152343,
+        "grad_norm": 1.744519829750061,
+        "learning_rate": 3.9111111111111115e-05,
+        "epoch": 0.6,
+        "step": 75
+      },
+      {
+        "loss": 0.3492934799194336,
+        "grad_norm": 5.821513652801514,
+        "learning_rate": 3.355555555555556e-05,
+        "epoch": 0.8,
+        "step": 100
+      },
+      {
+        "loss": 0.2975870895385742,
+        "grad_norm": 3.8165526390075684,
+        "learning_rate": 2.8000000000000003e-05,
+        "epoch": 1.0,
+        "step": 125
+      },
+      {
+        "eval_loss": 0.32908257842063904,
+        "eval_accuracy": 0.886,
+        "eval_macro_f1": 0.8857085523696389,
+        "eval_runtime": 68.5937,
+        "eval_samples_per_second": 14.579,
+        "eval_steps_per_second": 0.233,
+        "epoch": 1.0,
+        "step": 125
+      },
+      {
+        "loss": 0.22398300170898439,
+        "grad_norm": 2.400179862976074,
+        "learning_rate": 2.2444444444444447e-05,
+        "epoch": 1.2,
+        "step": 150
+      },
+      {
+        "loss": 0.22665145874023437,
+        "grad_norm": 1.572548508644104,
+        "learning_rate": 1.688888888888889e-05,
+        "epoch": 1.4,
+        "step": 175
+      },
+      {
+        "loss": 0.2613607215881348,
+        "grad_norm": 3.1773972511291504,
+        "learning_rate": 1.1333333333333334e-05,
+        "epoch": 1.6,
+        "step": 200
+      },
+      {
+        "loss": 0.25170284271240234,
+        "grad_norm": 3.4065821170806885,
+        "learning_rate": 5.777777777777778e-06,
+        "epoch": 1.8,
+        "step": 225
+      },
+      {
+        "loss": 0.18912891387939454,
+        "grad_norm": 1.4391366243362427,
+        "learning_rate": 2.2222222222222224e-07,
+        "epoch": 2.0,
+        "step": 250
+      },
+      {
+        "eval_loss": 0.28684917092323303,
+        "eval_accuracy": 0.907,
+        "eval_macro_f1": 0.9069223228233235,
+        "eval_runtime": 74.5371,
+        "eval_samples_per_second": 13.416,
+        "eval_steps_per_second": 0.215,
+        "epoch": 2.0,
+        "step": 250
+      }
+    ],
+    "test_inference_seconds": 108.9,
+    "test": {
+      "accuracy": 0.9015,
+      "macro_f1": 0.9016,
+      "per_class_f1": {
+        "World": 0.9065,
+        "Sports": 0.9769,
+        "Business": 0.8442,
+        "Sci/Tech": 0.8789
+      }
+    }
+  },
+  "compression": {
+    "distilbert_fp32": {
+      "accuracy": 0.9015,
+      "macro_f1": 0.9016,
+      "per_class_f1": {
+        "World": 0.9065,
+        "Sports": 0.9769,
+        "Business": 0.8442,
+        "Sci/Tech": 0.8789
+      },
+      "size_mb": 267.9,
+      "p50_ms": 62.9,
+      "p95_ms": 81.5,
+      "batch64_articles_per_s": 19.2
+    },
+    "distilbert_int8": {
+      "accuracy": 0.897,
+      "macro_f1": 0.8973,
+      "per_class_f1": {
+        "World": 0.9032,
+        "Sports": 0.9697,
+        "Business": 0.8367,
+        "Sci/Tech": 0.8795
+      },
+      "size_mb": 138.7,
+      "p50_ms": 75.3,
+      "p95_ms": 89.6,
+      "batch64_articles_per_s": 32.5,
+      "agreement_with_fp32": 0.9805
+    },
+    "tfidf_svm": {
+      "accuracy": 0.88,
+      "macro_f1": 0.8796,
+      "per_class_f1": {
+        "World": 0.8831,
+        "Sports": 0.9478,
+        "Business": 0.8338,
+        "Sci/Tech": 0.8538
+      },
+      "size_mb": 10.4,
+      "p50_ms": 10.99,
+      "p95_ms": 15.68
+    },
+    "torch_threads": 6
+  },
+  "distillation": {
+    "unlabeled_articles": 16000,
+    "teacher_label_seconds": 469.1,
+    "teacher_label_accuracy": 0.8998,
+    "kept_after_confidence_filter": 11096,
+    "kept_label_accuracy": 0.9689,
+    "student_gold_only": {
+      "accuracy": 0.88,
+      "macro_f1": 0.8796,
+      "per_class_f1": {
+        "World": 0.8831,
+        "Sports": 0.9478,
+        "Business": 0.8338,
+        "Sci/Tech": 0.8538
+      }
+    },
+    "student_gold_plus_teacher": {
+      "accuracy": 0.894,
+      "macro_f1": 0.8936,
+      "per_class_f1": {
+        "World": 0.9006,
+        "Sports": 0.9587,
+        "Business": 0.845,
+        "Sci/Tech": 0.8702
+      }
+    },
+    "oracle_gold_plus_true_labels": {
+      "accuracy": 0.907,
+      "macro_f1": 0.9068,
+      "per_class_f1": {
+        "World": 0.9148,
+        "Sports": 0.9694,
+        "Business": 0.8618,
+        "Sci/Tech": 0.881
+      }
+    },
+    "mcnemar_gold_only_vs_student": {
+      "only_a_correct": 27,
+      "only_b_correct": 55,
+      "p_value": 0.0026424928957725444
+    },
+    "student_latency": {
+      "p50_ms": 11.46,
+      "p95_ms": 15.74
+    }
+  },
+  "analysis": {
+    "accuracy_ci95": {
+      "baseline": [
+        0.8655,
+        0.8935
+      ],
+      "distilbert": [
+        0.8875,
+        0.9145
+      ]
+    },
+    "mcnemar_baseline_vs_bert": {
+      "only_a_correct": 55,
+      "only_b_correct": 98,
+      "p_value": 0.0006366069157043527
+    },
+    "confusion_pairs": {
+      "baseline": [
+        {
+          "true": "Business",
+          "predicted": "Sci/Tech",
+          "count": 59
+        },
+        {
+          "true": "Sci/Tech",
+          "predicted": "Business",
+          "count": 36
+        },
+        {
+          "true": "World",
+          "predicted": "Business",
+          "count": 32
+        },
+        {
+          "true": "Business",
+          "predicted": "World",
+          "count": 26
+        }
+      ],
+      "distilbert": [
+        {
+          "true": "Business",
+          "predicted": "Sci/Tech",
+          "count": 63
+        },
+        {
+          "true": "World",
+          "predicted": "Business",
+          "count": 37
+        },
+        {
+          "true": "Sci/Tech",
+          "predicted": "Business",
+          "count": 34
+        },
+        {
+          "true": "Business",
+          "predicted": "World",
+          "count": 16
+        }
+      ]
+    },
+    "n_test": 2000,
+    "baseline_errors": 240,
+    "bert_errors": 197,
+    "both_wrong": 142,
+    "both_wrong_same_label": 127,
+    "bert_confident_errors": 77,
+    "error_rate_by_length": [
+      {
+        "bucket": "<=25",
+        "n": 157,
+        "baseline_error": 0.1783,
+        "bert_error": 0.1529
+      },
+      {
+        "bucket": "26-35",
+        "n": 705,
+        "baseline_error": 0.1319,
+        "bert_error": 0.1007
+      },
+      {
+        "bucket": "36-45",
+        "n": 842,
+        "baseline_error": 0.1093,
+        "bert_error": 0.0914
+      },
+      {
+        "bucket": ">45",
+        "n": 296,
+        "baseline_error": 0.0912,
+        "bert_error": 0.0845
+      }
+    ]
+  }
+}
