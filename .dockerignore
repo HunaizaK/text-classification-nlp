@@ -1,0 +1,6 @@
+.venv
+data
+reports*
+**/__pycache__
+artifacts/teacher_probs_*
+artifacts/test_probs.npz
